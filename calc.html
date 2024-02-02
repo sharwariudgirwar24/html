@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <table border="1" cellpadding="20">
+            <thead></thead>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="result">
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="sendtotextbox(0)"></tdbutton>0</td>
+                <td><button onclick="sendtotextbox(1)"></tdbutton>1</td>
+                <td><button onclick="sendtotextbox(2)"></tdbutton>2</td>
+                <td><button onclick="sendtotextbox('+')"></tdbutton>+</td>
+            </tr>
+            <tr>
+                <td><button onclick="sendtotextbox(3)"></tdbutton>3</td>
+                <td><button onclick="sendtotextbox(4)"></tdbutton>4</td>
+                <td><button onclick="sendtotextbox(5)"></tdbutton>5</td>
+                <td><button onclick="sendtotextbox('-')"></tdbutton>-</td>
+            </tr>
+            <tr>
+                <td><button onclick="sendtotextbox(6)"></tdbutton>6</td>
+                <td><button onclick="sendtotextbox(7)"></tdbutton>7</td>
+                <td><button onclick="sendtotextbox(8)"></tdbutton>8</td>
+                <td><button onclick="sendtotextbox('*')"></tdbutton>*</td>
+            </tr>
+            <tr>
+                <td><button onclick="sendtotextbox(9)"></tdbutton>9</td>
+                <td><button onclick="sendtotextbox('C')"></tdbutton>C</td>
+                <td><button onclick="getCalculation()"></tdbutton>=</td>
+                <td><button onclick="sendtotextbox('/')"></tdbutton>/</td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function getCalculation(){
+       op=document.getElementById("result").value
+        document.getElementById("result").value = eval(op)
+        
+    }
+    function sendtotextbox(num){
+        document.getElementById("result").value=num
+        op=op+num
+        document.getElementById("result").value=op
+    }
+
+</script>
