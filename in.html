@@ -1,0 +1,13 @@
+<input type="text" id="amount">
+<button onclick="getGst()">click</button>
+&#8377;<h1 id="result"></h1>
+<script>
+    function getGst(){
+        amount=Number(document.getElementById("amount").value)
+    output=amount+(amount*0.18)
+    console.log(output) 
+    document.getElementById("result").innerHTML=output
+    }
+    
+   
+    </script>
