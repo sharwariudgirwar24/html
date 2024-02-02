@@ -1,0 +1,17 @@
+
+<input type="text" id="num" onkeyup="getTable()">
+<div id="result"></div>
+
+<script>
+   function getTable(){
+  num=document.getElementById("num").value
+    output=''
+    for ( i= 1; i <=10 ; i++) {
+        output=output+`${num}*${i}=${num*i}<br>`
+        console.log(`output`)
+        document.getElementById("result").innerHTML=output
+        
+    }
+   }
+ 
+    </script>
