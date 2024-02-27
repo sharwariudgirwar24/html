@@ -1,0 +1,49 @@
+<button onclick="showdata(1)">Page 1</button>
+<button onclick="showdata(2)">Page 2</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>First_name</th>
+            <th>Last_name</th>
+            <th>Avatar</th>
+        </tr>
+    </thead>
+    <tbody id="records">
+    </tbody>
+</table>
+
+<style>
+    img {
+        border-radius: 10px;
+    }
+</style>
+
+
+
+<script>
+    function showdata(pageno) {
+        url = `https://reqres.in/api/users?page=${pageno}`
+        fetch(url)
+            .then(res => res.json())
+            .then(result => {
+                console.table(result['data'])
+                output = ``
+                for (let i = 0; i < 6; i++) {
+
+                    output += `<tr>`
+                    output += `<td>${result['data'][i]['id']}</td>`
+                    output += `<td>${result['data'][i]['email']}</td>`
+                    output += `<td>${result['data'][i]['first_name']}</td>`
+                    output += `<td>${result['data'][i]['last_name']}</td>`
+                    output += `<td><img src="${result['data'][i]['avatar']}"></td>`
+                    output += `</tr>`
+                }
+                document.getElementById('records').innerHTML= output
+            })
+
+    }
+
+
+</script>

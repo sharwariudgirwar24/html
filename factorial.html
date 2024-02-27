@@ -1,0 +1,19 @@
+<script>
+    "use strict";
+    let num = parseInt(prompt("Enter a number : "));
+
+    function factorial(x) {
+        let fact = 1;
+        for (let i = 1; i <= x; i++) {
+            fact *= i;
+        }
+        console.log(`${x}! = ${fact}`);
+        if (confirm("Would yoy like to try again!!")) {
+            num = parseInt(prompt("Enter a number : "));
+            factorial(num);
+        }
+        else {
+            console.log("Thanks for trying !!!!")
+        }
+    }
+</script>
