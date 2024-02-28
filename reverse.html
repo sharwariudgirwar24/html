@@ -1,0 +1,28 @@
+<style>
+    div{}
+</style>
+<input type="text" id="n" value=""><br><br>
+<button onclick="string()">click</button>
+<h1 id="str"></h1>
+<h6 id="t"></h6 id="t">
+<script> 
+function string(){
+    n=document.getElementById('n').value
+    a=`${n.split('').reverse('').join('')}`
+    document.getElementById('str').innerHTML= a
+    if(n === a){
+        document.getElementById('t').innerHTML=`OK`
+    }
+    else{
+        document.getElementById('t').innerHTML=`Not OK`
+    }
+}
+</script>
+
+
+
+
+
+
+
+    

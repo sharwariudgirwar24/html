@@ -1,6 +1,14 @@
-<script>
-    radius = Number(prompt("Enter radius"))
- area=3.14*radius*radius
-    console.log("area of circle= ",area)
+<input type="text" id="radius" value=""><br><br>
+<button onclick="area() , circumference()">cick</button>
 
+<h1 id="area of circle"></h1>
+<h1 id="circumference"></h1>
+<script>
+    function area(){
+    radius= document.getElementById('radius').value
+    document.getElementById('area of circle').innerHTML=`Area of circle = ${3.14*radius*radius}`}
+    function circumference(){
+        radius= document.getElementById('radius').value
+        document.getElementById('circumference').innerHTML=`Circumference of circle = ${2*3.14*radius}`
+    }
 </script>
